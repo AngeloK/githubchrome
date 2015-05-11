@@ -59,3 +59,31 @@
     max-width:66%;
     height:auto;
 }
+
+.searchResult {
+    list-style:none;
+    width:100%;
+    float:right;
+    height:400px;
+    padding:30px 10px 10px 10px;
+    overflow:scroll;
+}
+
+.resultTitle {
+    color:#4183c4;
+    font-size:20px;
+    text-decoration:none;
+}
+
+.resultDescription{
+    margin-top:5px;
+}
+
+.repoListState {
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #888;
+    font:13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, 
+    clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
