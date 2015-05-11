@@ -15,8 +15,14 @@
                 <p>Neyanbhbin</p>
             </div>
             <div id="githubLabel">
-                <div class="github_icon"><img src="img/github_icon.png" alt=""></div>
-                <input id="searchInput" type="text" placeholder="Search GitHub">
+                <form action="">
+                    <div class="github_icon">
+                        <img src="img/github_icon.png" alt="">
+                    </div>
+                    <input id="searchInput" type="text" 
+                    placeholder="Search GitHub" ng-model="search.github">
+                </form>
+                <input type="submit" style="position:absolute;left:-9999px">
                 <div git-search id="searchResult">
                     {{ result }}
                 </div>
