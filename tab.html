@@ -8,10 +8,21 @@
     <script src="js/vendor/angular-route/angular-route.js"></script>
 </head>
 <body ng-controller="MainController">
-    <div class="container">
-        <h1>{{ time.raw| date:'hh:mm:ss' }}</h1>
-        <p>Neyanbhbin</p>
+    <div class="wrapper">
+        <div class="container">
+            <div id="profileLabel">
+                <h1>{{ time.raw| date:'hh:mm:ss' }}</h1>
+                <p>Neyanbhbin</p>
+            </div>
+            <div id="githubLabel">
+                <div class="github_icon"><img src="img/github_icon.png" alt=""></div>
+                <input id="searchInput" type="text" placeholder="Search GitHub">
+                <div id="searchResult"></div>
+            </div>
+        </div>
     </div>
     <script src="js/app.js"></script>
+    <script src="js/services/githubSearch.js"></script>
+    <script src="js/controllers/main.js"></script>
 </body>
 </html>

@@ -1,21 +1,60 @@
 * {
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
-.container {
+.wrapper {
     position:absolute;
     top:50%;
-    text-align: center;
-    width: 50%;
+    left:0;
+    width:100%;
     height:400px;
     margin-top:-200px;
 }
 
-.container h1 {
+.container {
+    max-width:90%;
+    margin:0 auto; 
+    height:400px;
+    padding:40px 0;
+}
+
+#profileLabel {
+    float:left;
+    text-align: center;
+    width:50%;
+}
+
+#profileLabel h1 {
     font-size:100px;
 }
 
-.container p {
-    font-size:50px;
+#profileLabel p {
+    font-size:25px;
+}
+
+#githubLabel {
+    width:50%;
+    float:right;
+}
+
+#githubLabel input {
+    float:left;
+    width:75%;
+    height:30px;
+    margin:5px auto;
+    padding-left:10px;
+}
+
+.github_icon {
+    width:10%;
+    height:30px;
+    float:left;
+}
+
+.github_icon img {
+    display:block;
+    max-width:66%;
+    height:auto;
 }
