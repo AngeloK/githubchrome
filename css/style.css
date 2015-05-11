@@ -22,7 +22,7 @@
 
 #profileLabel {
     float:left;
-    text-align: center;
+    padding:0 60px;
     width:50%;
 }
 
@@ -31,6 +31,7 @@
 }
 
 #profileLabel p {
+    color:#d9d9d9;
     font-size:25px;
 }
 
