@@ -23,7 +23,17 @@
                     placeholder="Search GitHub" ng-model="search.github">
                 </form>
                 <input type="submit" style="position:absolute;left:-9999px">
-                <ul github-result class="searchResult"></ul>
+                <ul github-result class="searchResult">
+                    <li ng-repeat="item in items">
+                    <a href="{{ item.html_url }}" class="resultTitle"><span>{{ item.full_name}}</span></a>
+                        <div class="repoListState">
+                            <span class="resultLanguageType">{{ item.language }}</span>
+                            <span class="resultStars">Stars: {{ item.watchers }}</span>&nbsp;
+                            <span class="resultForks">Fork: {{ item.forks }}</span>
+                        </div>
+                        <p class="resultDescription">{{ item.description }}</p>
+                    </li>
+                </ul>
             </div>
             <div class="clear"></div>
         </div>
