@@ -15,7 +15,7 @@
                 <p>Neyanbhbin</p>
             </div>
             <div id="githubLabel">
-                <form action="">
+                <form novalidate ng-submit=submit(search.github)>
                     <div class="github_icon">
                         <img src="img/github_icon.png" alt="">
                     </div>
@@ -23,15 +23,24 @@
                     placeholder="Search GitHub" ng-model="search.github">
                 </form>
                 <input type="submit" style="position:absolute;left:-9999px">
-                <ul github-result class="searchResult">
+                <ul github-result search-pattern="search.github" 
+                        class="searchResult">
                     <li ng-repeat="item in items">
-                    <a href="{{ item.html_url }}" class="resultTitle"><span>{{ item.full_name}}</span></a>
-                        <div class="repoListState">
-                            <span class="resultLanguageType">{{ item.language }}</span>
-                            <span class="resultStars">Stars: {{ item.watchers }}</span>&nbsp;
-                            <span class="resultForks">Fork: {{ item.forks }}</span>
-                        </div>
-                        <p class="resultDescription">{{ item.description }}</p>
+                    <a href="{{ item.html_url }}" class="resultTitle">
+                        <span>{{ item.full_name}}</span>
+                    </a>
+                    <div class="repoListState">
+                        <span class="resultLanguageType">
+                            {{ item.language }}
+                        </span>
+                        <span class="resultStars">
+                            Stars: {{ item.watchers }}
+                        </span>&nbsp;
+                        <span class="resultForks">
+                            Fork: {{ item.forks }}
+                        </span>
+                    </div>
+                    <p class="resultDescription">{{ item.description }}</p>
                     </li>
                 </ul>
             </div>
