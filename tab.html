@@ -26,8 +26,7 @@
                     <input type="submit" style="position:absolute;left:-9999px"
                         ng-disabled="search_form.$invalid">
                 </form>
-                <ul search-pattern="search.github" 
-                        class="searchResult">
+                <ul github-search-result class="searchResult hidden" ng-show="searchEnd">
                     <li ng-repeat="item in items">
                     <a href="{{ item.html_url }}" class="resultTitle">
                         <span>{{ item.full_name}}</span>

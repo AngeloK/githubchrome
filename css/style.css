@@ -71,6 +71,10 @@
     top:-150px;
 }
 
+.hidden {
+    display:none;
+}
+
 .resultTitle {
     color:#4183c4;
     font-size:20px;
