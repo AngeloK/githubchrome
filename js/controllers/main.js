@@ -1,11 +1,11 @@
-angular.module('demoApp',['services'])
+angular.module('controllers',['services'])
 .controller('MainController',function($scope,$timeout,githubSearch){
     $scope.time = {};
     $scope.search = {};
     var searchPattern = $scope.search.github;
     
     $scope.submit = function(searchPattern) {
-        $scope.$emit("form submit");
+        $scope.$broadcast("form submit");
         githubSearch.getSearchResult(searchPattern,"stars","desc")
         .then(function(data){
             $timeout(function(){
@@ -18,13 +18,4 @@ angular.module('demoApp',['services'])
         $timeout(updateTime,1000);
     }
     updateTime();
-})
-.directive('githubSearchForm',function($animate){
-    return {
-        link: function(scope, element, attrs) {
-            scope.$on('form submit',function(){
-                $animate['addClass'](element, 'ng-move');
-            })
-        }
-    } 
-})
+});

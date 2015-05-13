@@ -1,4 +1,6 @@
 var myApp = angular.module('demoApp', [
                 'ngRoute',
-                'services'
+                'controllers',
+                'services',
+                'directives'
 ]);
