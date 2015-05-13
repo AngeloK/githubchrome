@@ -5,6 +5,7 @@ angular.module('demoApp',['services'])
     var searchPattern = $scope.search.github;
     
     $scope.submit = function(searchPattern) {
+        $scope.$emit("form submit");
         githubSearch.getSearchResult(searchPattern,"stars","desc")
         .then(function(data){
             $timeout(function(){
@@ -17,4 +18,13 @@ angular.module('demoApp',['services'])
         $timeout(updateTime,1000);
     }
     updateTime();
-});
+})
+.directive('githubSearchForm',function($animate){
+    return {
+        link: function(scope, element, attrs) {
+            scope.$on('form submit',function(){
+                $animate['addClass'](element, 'ng-move');
+            })
+        }
+    } 
+})

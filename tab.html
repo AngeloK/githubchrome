@@ -7,6 +7,7 @@
     <script src="js/vendor/angular/angular.min.js"></script>
     <script src="js/vendor/angular-route/angular-route.min.js"></script>
     <script src="js/vendor/angular-animate/angular-animate.min.js"></script>
+    <script src="js/directives/git_search_form.js"></script>
 </head>
 <body ng-controller="MainController">
     <div class="wrapper">
@@ -16,7 +17,7 @@
                 <p>Neyanbhbin</p>
             </div>
             <div id="githubLabel">
-                <form github-Search-Form name="search_form" novalidate ng-submit=submit(search.github)>
+                <form github-search-form name="search_form" novalidate ng-submit=submit(search.github)>
                     <div class="github_icon">
                         <img src="img/github_icon.png" alt="">
                     </div>
@@ -25,7 +26,7 @@
                     <input type="submit" style="position:absolute;left:-9999px"
                         ng-disabled="search_form.$invalid">
                 </form>
-                <ul github-result search-pattern="search.github" 
+                <ul search-pattern="search.github" 
                         class="searchResult">
                     <li ng-repeat="item in items">
                     <a href="{{ item.html_url }}" class="resultTitle">
@@ -52,6 +53,5 @@
     <script src="js/app.js"></script>
     <script src="js/controllers/main.js"></script>
     <script src="js/services/githubSearch.js"></script>
-    <script src="js/directives/git_search.js"></script>
 </body>
 </html>
