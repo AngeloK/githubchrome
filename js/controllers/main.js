@@ -5,11 +5,12 @@ angular.module('controllers',['services'])
     var searchPattern = $scope.search.github;
     
     $scope.submit = function(searchPattern) {
-        $scope.$broadcast("form submit");
+        $scope.$broadcast('form submit');
         githubSearch.getSearchResult(searchPattern,"stars","desc")
         .then(function(data){
             $timeout(function(){
                 $scope.items = data.data.items;
+                $scope.$broadcast('loading complete');
             },0);
         });
     };

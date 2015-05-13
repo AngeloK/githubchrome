@@ -26,6 +26,7 @@
                     <input type="submit" style="position:absolute;left:-9999px"
                         ng-disabled="search_form.$invalid">
                 </form>
+                <div github-loading class="loadingGif hidden"><img src="img/github-loading.gif" alt=""></div>
                 <ul github-search-result class="searchResult hidden" ng-show="searchEnd">
                     <li ng-repeat="item in items">
                     <a href="{{ item.html_url }}" class="resultTitle">

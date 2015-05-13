@@ -11,8 +11,19 @@ angular.module('directives',[])
 })
 .directive('githubSearchResult',function($animate){
     return function(scope, element, attrs){
-        scope.$on('form submit', function(){
+        scope.$on('loading complete', function(){
             $animate['removeClass'](element,'hidden');
         })
     }
 })
+.directive('githubLoading', function($animate){
+    return function(scope, element, attrs) {
+        scope.$on('form submit', function(){
+            $animate['removeClass'](element,'hidden');
+        })
+        scope.$on('loading complete',function(){
+            $animate['addClass'](element, 'hidden');
+        })
+    }
+})
+

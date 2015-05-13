@@ -118,3 +118,15 @@ form.ng-move {
     animation: 1s move-after-submit;
     top:-150px;
 }
+
+.loadingGif {
+    width:50px;
+    position:relative;
+    left:263px;
+}
+
+.loadingGif img{
+    display:block;
+    max-width:50%;
+    height:auto;
+}
