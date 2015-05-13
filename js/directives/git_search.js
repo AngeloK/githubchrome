@@ -1,11 +1,7 @@
 //angular.module('demoApp',[])
-//.directive('githubResult',function(githubSearch){
+//.directive('githubSearchForm',function(githubSearch){
     //return {
-        //scope: {
-            //stringForSearch:"=searchPattern",
-        //}
-        //controller: function(scope,element,attrs){
-            
-        //}
+        //restrict:'A',
+        //require:'?ngModel',
     //} 
 //})
